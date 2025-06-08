@@ -4,6 +4,7 @@
 
 
 ##### Core scientific packages
+jupyter
 jupyterlab~=4.0.8
 matplotlib~=3.8.1
 numpy~=1.26.2
@@ -89,4 +90,3 @@ pydot~=1.4.2
 
 # Optional: statsmodels is only used in chapter 15 for time series analysis
 statsmodels~=0.14.0
-
