@@ -58,6 +58,49 @@ Finally, start Jupyter:
 
 If you need further instructions, read the [detailed installation instructions](INSTALL.md).
 
+> [!TIP]
+> 
+> If one does not want Anaconda, we can choose to install `virtualenv` and create an isolated Python environment by
+> 
+> ```console
+> python3 -m pip install --user -U virtualenv
+> python3 -m virtualenv .venv
+> ```
+> 
+> Activate environment with
+> 
+> ```console
+> source .venv/bin/activate
+> ```
+> 
+> or, on Windows
+> 
+> ```console
+> ./venv\Scripts\activate
+> ``` 
+>
+> To deactivate this environment later, use
+> 
+> ```console
+> deactivate
+> ```
+>
+> Install dependencies by
+> 
+> ```console
+> pip3 install -r requirements.txt
+> ```
+>
+> Now we can start Jupyter by typing the following command:
+> 
+> ```console
+> python3 -m ipykernel install --user --name=python3 && jupyter notebook
+> ```
+>
+> The first half of the composite commands registers virtualenv to Jupyter and give it a name with `python3` A Jupyter
+> server is now running in our terminal, listening to port 8888. We can visit this server by opening our web browser to
+> http://localhost:8888/
+
 # FAQ
 
 **Which Python version should I use?**
