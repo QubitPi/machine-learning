@@ -17,7 +17,7 @@ summarizer = pipeline(
 )
 
 translator = pipeline(
-    "translation", 
+    "translation",
     model="Helsinki-NLP/opus-mt-it-en")
 
 def transcribe(microphone, file_upload):
@@ -59,7 +59,7 @@ def yt_transcribe(yt_url):
 
     summary = summarizer(text)
     summary = summary[0]["summary_text"]
-      
+
     translate = translator(summary)
     translate = translate[0]["translation_text"]
 
@@ -79,7 +79,7 @@ mf_transcribe = gr.Interface(
     ],
     layout="horizontal",
     theme="huggingface",
-    title="Whisper Demo: Transcribe and Translate Italian Audio",
+    title="Whisper Fine-Tuned: Transcribe and Translate Italian Audio",
     description=(
         "Transcribe and Translate long-form microphone or audio inputs with the click of a button! Demo uses the the fine-tuned"
         f" [whispy/whisper_hf](https://huggingface.co/whispy/whisper_hf) and 🤗 Transformers to transcribe audio files"
@@ -98,11 +98,11 @@ yt_transcribe = gr.Interface(
     ],
     layout="horizontal",
     theme="huggingface",
-    title="Whisper Demo: Transcribe, Summarize and Translate YouTube",
+    title="Whisper Fine-Tuned: Transcribe, Summarize and Translate YouTube",
     description=(
         "Transcribe, Summarize and Translate long-form YouTube videos with the click of a button! Demo uses the the fine-tuned "
         f" [whispy/whisper_hf](https://huggingface.co/whispy/whisper_hf) and 🤗 Transformers to transcribe audio files of"
-        " arbitrary length. It also uses other two models to first summarize and then translate the text input. You can try with the following examples: " 
+        " arbitrary length. It also uses other two models to first summarize and then translate the text input. You can try with the following examples: "
         f" [Video1](https://www.youtube.com/watch?v=xhWhyu8cBTk)"
         f" [Video2](https://www.youtube.com/watch?v=C6Vw_Z3t_2U)"
     ),
