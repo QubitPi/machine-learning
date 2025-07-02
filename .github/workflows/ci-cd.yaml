@@ -65,5 +65,8 @@ jobs:
         run: |
           cd ../
           git clone https://QubitPi:$HF_TOKEN@huggingface.co/spaces/QubitPi/Italian-ASR
+          cd Italian-ASR
+          cp ../machine-learning/italian-asr/app/* .
+          git push https://QubitPi:$HF_TOKEN@huggingface.co/spaces/QubitPi/Italian-ASR main -f
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
