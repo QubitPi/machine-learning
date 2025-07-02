@@ -63,7 +63,8 @@ jobs:
           lfs: true
       - name: Push to hub
         run: |
-          mv italian-asr/app .git ../italian-asr-app
+          mkdir ../italian-asr-app
+          mv italian-asr/app/* .git ../italian-asr-app
           cd ../italian-asr-app
           git push https://QubitPi:$HF_TOKEN@huggingface.co/spaces/QubitPi/Italian-ASR master:main -f
         env:
