@@ -64,12 +64,6 @@ jobs:
       - name: Push to hub
         run: |
           cd ../
-          mkdir Italian-ASR
-          cd Italian-ASR
-          git init
-          git remote add origin git@hf.co:spaces/QubitPi/Italian-ASR
-          git branch -M master
-          mv ../machine-learning/italian-asr/app/* .
-          git push https://QubitPi:$HF_TOKEN@huggingface.co/spaces/QubitPi/Italian-ASR master:main -f
+          git clone https://QubitPi:$HF_TOKEN@huggingface.co/spaces/QubitPi/Italian-ASR
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
