@@ -67,8 +67,12 @@ jobs:
           git clone https://QubitPi:$HF_TOKEN@huggingface.co/spaces/QubitPi/Italian-ASR
           cd Italian-ASR
           cp ../machine-learning/italian-asr/app/* .
+          
           git add .
           git commit -m "Syncing from QubitPi/machine-learning"
+          git config --global user.email "jack20220723@gmail.com"
+          git config --global user.name "QubitPi"
+  
           git push https://QubitPi:$HF_TOKEN@huggingface.co/spaces/QubitPi/Italian-ASR main -f
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
