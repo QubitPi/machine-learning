@@ -68,15 +68,14 @@ jobs:
           cd Italian-ASR
           cp ../machine-learning/italian-asr/app/* .
           
-          git config --global user.email "jack20220723@gmail.com"
-          git config --global user.name "QubitPi"
-          git add .
-          git commit -m "Syncing from QubitPi/machine-learning"
-          
           STATUS_OUTPUT=$(git status --porcelain)
           if [ -z "$STATUS_OUTPUT" ]; then
             echo "No changes found in the Git repository."
           else
+            git config --global user.email "jack20220723@gmail.com"
+            git config --global user.name "QubitPi"
+            git add .
+            git commit -m "Syncing from QubitPi/machine-learning"
             git push https://QubitPi:$HF_TOKEN@huggingface.co/spaces/QubitPi/Italian-ASR main -f
           fi
         env:
