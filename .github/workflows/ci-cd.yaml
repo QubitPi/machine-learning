@@ -67,8 +67,7 @@ jobs:
           mkdir Italian-ASR
           cd Italian-ASR
           git init
-          git remote add git clone git@hf.co:spaces/QubitPi/Italian-ASR
-          git branch -m master
+          git remote add git@hf.co:spaces/QubitPi/Italian-ASR
           mv ../machine-learning/italian-asr/app/* .
           git push https://QubitPi:$HF_TOKEN@huggingface.co/spaces/QubitPi/Italian-ASR master:main -f
         env:
