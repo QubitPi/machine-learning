@@ -1,5 +1,8 @@
-Machine Learning Notebooks, 3rd edition
-=================================
+Machine Learning Notebooks
+==========================
+
+[![Italian-ASR Hugging Face space badge]][Italian-ASR Hugging Face space URL]
+[![Apache License Badge]][Apache License, Version 2.0]
 
 This project aims at teaching you the fundamentals of Machine Learning in
 python. It contains the example code and solutions to the exercises in the third edition of my O'Reilly book [Hands-on Machine Learning with Scikit-Learn, Keras and TensorFlow (3rd edition)](https://homl.info/er3):
@@ -125,3 +128,14 @@ See [INSTALL.md](INSTALL.md)
 
 ## Contributors
 I would like to thank everyone [who contributed to this project](https://github.com/ageron/handson-ml3/graphs/contributors), either by providing useful feedback, filing issues or submitting Pull Requests. Special thanks go to Haesun Park and Ian Beauregard who reviewed every notebook and submitted many PRs, including help on some of the exercise solutions. Thanks as well to Steven Bunkley and Ziembla who created the `docker` directory, and to github user SuperYorio who helped on some exercise solutions. Thanks a lot to Victor Khaustov who submitted plenty of excellent PRs, fixing many errors. And lastly, thanks to Google ML Developer Programs team who supported this work by providing Google Cloud Credit.
+
+License
+-------
+
+The use and distribution terms for [Machine Learning Notebooks]() are covered by the [Apache License, Version 2.0].
+
+[Apache License Badge]: https://img.shields.io/badge/Apache%202.0-FE5D26.svg?style=for-the-badge&logo=Apache&logoColor=white
+[Apache License, Version 2.0]: https://www.apache.org/licenses/LICENSE-2.0
+
+[Italian-ASR Hugging Face space badge]: https://img.shields.io/badge/Hugging%20Face%20Space-Italian--ASR-FF9D00?style=for-the-badge&logo=huggingface&logoColor=white&labelColor=6B7280
+[Italian-ASR Hugging Face space URL]: https://huggingface.co/spaces/QubitPi/Italian-ASR
