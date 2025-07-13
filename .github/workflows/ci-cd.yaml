@@ -34,6 +34,13 @@ jobs:
   server:
     name: Test Notebook Server
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        server-path: [.,italian-asr]
+    defaults:
+      run:
+        working-directory: ${{ matrix.server-path }}
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python ${{ env.PYTHON_VERSION }}
