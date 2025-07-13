@@ -33,11 +33,12 @@ env:
 jobs:
   server:
     name: Test Notebook Server
-    runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
+        os: [ ubuntu-latest, windows-latest, macos-latest ]
         server-path: [.,italian-asr]
+    runs-on: ${{ matrix.os }}
     defaults:
       run:
         working-directory: ${{ matrix.server-path }}
